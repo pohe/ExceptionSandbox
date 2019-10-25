@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sandbox
 {
-    class TooShortRegnrException: Exception
+    public class TooShortRegnrException: Exception
     {
         public TooShortRegnrException(string message): base(message)
         {

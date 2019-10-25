@@ -54,7 +54,7 @@ namespace Sandbox
             {
                 //Car c = new Car(model);
                 //c.Regnr = regnr;
-                Car c = new Car(model, regnr);
+                Car c = new Car(regnr, model);
                 //Skal validere regnr i exception
             }
             catch (TooShortRegnrException tex)

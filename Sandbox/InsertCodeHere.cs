@@ -50,8 +50,24 @@ namespace Sandbox
             Console.WriteLine("Indlæs model");
             string model = Console.ReadLine();
 
-            Car c = new Car(model, regnr);
-
+            try
+            {
+                //Car c = new Car(model);
+                //c.Regnr = regnr;
+                Car c = new Car(model, regnr);
+                //Skal validere regnr i exception
+            }
+            catch (TooShortRegnrException tex)
+            {
+                Console.WriteLine(tex.Message);
+            }
+            catch (MissingCharacterException mex)
+            {
+                Console.WriteLine(mex.Message);
+            }
+            //Skal kunne catch exception hvis der mangel A som start bogstav
+            
+           
 
             // The LAST line of code should be ABOVE this line
         }

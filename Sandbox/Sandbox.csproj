@@ -44,9 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Car.cs" />
+    <Compile Include="CheckRegnr.cs" />
     <Compile Include="InsertCodeHere.cs" />
+    <Compile Include="MissingCharacterException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TooShortRegnrException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

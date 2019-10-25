@@ -13,7 +13,22 @@ namespace Sandbox
         public string Regnr
         {
             get { return _regNr; }
-            set { _regNr = value; }
+            set
+            {
+                if (CheckRegnr.Valider(value))
+                    _regNr = value;
+                //try
+                //{
+                //    if (CheckRegnr.Valider(value))
+                //        _regNr = value;
+                //}
+                //catch (Exception e)
+                //{
+                //    if (CheckRegnr.Valider(value))
+                //        _regNr = value;
+                    
+                //}
+            }
         }
 
         public string Model { get; set; }
@@ -25,6 +40,8 @@ namespace Sandbox
 
         public Car(string regNr, string model)
         {
+            //Valider regnr
+            if ( CheckRegnr.Valider((regNr)))
             _regNr = regNr;
             Model = model;
         }
